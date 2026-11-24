@@ -1,0 +1,50 @@
+items:
+  - {type: front, slug: preface, title: Preface, file: preface.md}
+  - {type: front, slug: aimade, title: "How This Book Was Made", file: aimade.md}
+  - {type: part, slug: p1, title: Foundations, text: "How systems talk to each other, how an architect thinks, and the vocabulary you need before anything else."}
+  - {type: chapter, slug: basics, title: "What Integration Really Is", file: ch01-basics.md}
+  - {type: chapter, slug: mindset, title: "The Architect's Mindset", file: ch02-mindset.md}
+  - {type: part, slug: p2, title: "Discover and Decide", text: "The questions to ask before anything is built, the landscapes your integrations live in, the patterns that solve recurring problems, and a method for choosing between them."}
+  - {type: chapter, slug: journey, title: "The Integration Journey", file: ch03-journey.md}
+  - {type: chapter, slug: discovery, title: "Discovery: Asking the Right Questions", file: ch04-discovery.md}
+  - {type: chapter, slug: topologies, title: "Where Integrations Run", file: ch05-topologies.md}
+  - {type: chapter, slug: patterns1, title: "Patterns for Requests and Data Movement", file: ch06-patterns1.md}
+  - {type: chapter, slug: patterns2, title: "Patterns for Messages, Routing, and Authority", file: ch07-patterns2.md}
+  - {type: chapter, slug: time, title: "Behavior in Time: The Hard Cases", file: ch08-time.md}
+  - {type: chapter, slug: decide, title: "Making the Decision", file: ch09-decide.md}
+  - {type: part, slug: p3, title: "Design and Build", text: "Reading other people's APIs, designing your own, moving and transforming data, authenticating, writing clients that survive production, keeping systems in sync, and testing and shipping the result."}
+  - {type: chapter, slug: readdocs, title: "Reading API Documentation Like an Architect", file: ch10-readdocs.md}
+  - {type: chapter, slug: apidesign, title: "Designing APIs, Webhooks, and Events", file: ch11-apidesign.md}
+  - {type: chapter, slug: formats, title: "Data Formats, Mapping, and Transformation", file: ch12-formats.md}
+  - {type: chapter, slug: auth, title: "Authentication and Authorization", file: ch13-auth.md}
+  - {type: chapter, slug: python, title: "Python Clients That Survive Production", file: ch14-python.md}
+  - {type: chapter, slug: sync, title: "Synchronization Design", file: ch15-sync.md}
+  - {type: chapter, slug: testing, title: "Testing Integrations", file: ch16-testing.md}
+  - {type: chapter, slug: delivery, title: "Delivery: Pipelines, Configuration, and Environments", file: ch17-delivery.md}
+  - {type: part, slug: p4, title: "Messaging and Streaming", text: "Kafka from first principles to production, the many ways data enters and leaves a streaming platform, the other interfaces you will meet, and the large SaaS platforms most enterprises depend on."}
+  - {type: chapter, slug: kafka1, title: "Kafka Fundamentals", file: ch18-kafka1.md}
+  - {type: chapter, slug: kafka2, title: "Kafka in Production", file: ch19-kafka2.md}
+  - {type: chapter, slug: kafkaio, title: "Kafka as an Integration Backbone", file: ch20-kafkaio.md}
+  - {type: chapter, slug: otherifs, title: "Beyond REST and Kafka", file: ch21-otherifs.md}
+  - {type: chapter, slug: saas, title: "Integrating Enterprise SaaS Platforms", file: ch22-saas.md}
+  - {type: part, slug: p5, title: "Platforms and Practice", text: "Integration platforms and how to choose among them, nine composite case studies, and one project followed from the first meeting to the first incident."}
+  - {type: chapter, slug: platforms, title: "Integration Platforms", file: ch23-platforms.md}
+  - {type: chapter, slug: cases, title: "Case Studies", file: ch24-cases.md}
+  - {type: chapter, slug: capstone, title: "Capstone: Larkspur Outdoor", file: ch25-capstone.md}
+  - {type: part, slug: p6, title: "Operate, Secure, Govern", text: "Keeping integrations reliable and observable, secure by design, recoverable, and governed as an estate rather than a pile of projects."}
+  - {type: chapter, slug: reliability, title: "Reliability and Observability", file: ch26-reliability.md}
+  - {type: chapter, slug: security, title: "Security and Threat Modeling", file: ch27-security.md}
+  - {type: chapter, slug: recovery, title: "Recovery, Cutover, Capacity, and Estimation", file: ch28-recovery.md}
+  - {type: chapter, slug: governance, title: "Governance and the Operating Model", file: ch29-governance.md}
+  - {type: chapter, slug: troubleshoot, title: "A Troubleshooting Field Guide", file: ch30-troubleshoot.md}
+  - {type: part, slug: p7, title: "Growing as an Architect", text: "Turning knowledge into skill: the learning path, the habits that compound, and how to prove your ability."}
+  - {type: chapter, slug: career, title: "Becoming an Integration Architect", file: ch31-career.md}
+  - {type: appendix, slug: discoverybank, title: "The Discovery Question Bank", file: appA-discovery.md}
+  - {type: appendix, slug: interviewbank, title: "Interview and Knowledge-Check Questions", file: appB-interview.md}
+  - {type: appendix, slug: scenarios, title: "Workshop Scenario Cards", file: appC-scenarios.md}
+  - {type: appendix, slug: templates, title: "Templates", file: appD-templates.md}
+  - {type: appendix, slug: codelab, title: "Companion Code", file: appE-code.md}
+  - {type: appendix, slug: glossary, title: "Glossary", file: appF-glossary.md}
+  - {type: appendix, slug: reading, title: "Further Reading, Standards, and Sources", file: appG-reading.md}
+  - {type: back, slug: about, title: "About the Author", file: about.md}
+  - {type: back, slug: colophon, title: Colophon, file: colophon.md}

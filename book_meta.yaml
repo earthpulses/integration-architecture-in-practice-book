@@ -1,0 +1,18 @@
+# Publication details read by build_book.py, make_cover.py and make_md.py.
+# Change a value, then rebuild. Empty values are left out of the book.
+title: Integration Architecture in Practice
+subtitle: Designing, Building, and Running Enterprise Integrations from REST to Kafka
+author: Stefan Živanović
+role: Solution Architect
+city: Prague
+country: Czech Republic
+year: 2026
+edition: First Edition
+edition_date: November 2026
+copyright_holder: Stefan Živanović
+publisher: ""        # empty = "Published by the author"
+isbn: ""             # e.g. 978-80-xxxxx-xx-x ; omitted from the copyright page while empty
+email: ""            # contact address for corrections; omitted while empty
+website: ""
+code_license: MIT
+ai_statement: "Generated with AI assistance (Claude, by Anthropic), under the author's direction."

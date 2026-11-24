@@ -1,0 +1,151 @@
+# display | regex (optional)
+AsyncAPI
+API gateway | API gateways?
+API-led connectivity
+architecture decision record | architecture decision records?|ADRs?
+authority matrix
+authority split
+Avro
+backoff | (?:exponential )?backoff
+backpressure
+bulkhead | bulkheads?
+canonical model | canonical models?
+change data capture | change[- ]data[- ]capture|CDC
+circuit breaker | circuit breakers?
+claim check
+CloudEvents
+compaction | (?:log )?compaction|compacted topics?
+consumer group | consumer groups?
+consumer lag | consumer lag|time lag
+contract testing | contract tests?|contract testing
+cursor pagination | cursor paging|cursor-based paging|cursors?
+data contract | data contracts?
+dead letter queue | dead[- ]letter (?:queues?|topics?)
+Debezium
+delivery semantics
+demilitarized zone | DMZ
+discovery workshop | discovery workshops?
+dual-write problem | dual[- ]write
+enterprise service bus | ESB|enterprise service bus
+error budget | error budgets?
+event mesh
+event streaming
+event-carried state transfer
+exactly once | exactly[- ]once
+failure injection | failure[- ]injection
+feature flag | feature flags?
+fan-out
+FHIR
+golden file | golden[- ]files?
+GraphQL
+gRPC
+HL7
+HMAC
+hypercare
+idempotency | idempoten\w+
+idempotency key | Idempotency-Key|idempotency keys?
+identity provisioning
+incremental synchronization | incremental sync(?:hronization)?|incremental reads?
+integration brief | integration briefs?
+integration platform | iPaaS|integration platforms?
+IBM MQ
+JSON
+JWT | JWTs?|JSON Web Tokens?
+Kafka
+Kafka Connect
+KRaft
+lineage | (?:data )?lineage
+managed file transfer | managed file transfer|MFT
+master data management | master data management|MDM
+Model Context Protocol | MCP|Model Context Protocol
+MQTT
+mutual TLS | mutual TLS|mTLS
+MuleSoft
+OAuth 2.0 | OAuth(?: 2\.0)?
+offset | offsets?
+OpenAPI
+OpenLineage
+OpenTelemetry
+orchestration
+outbox pattern | (?:transactional )?outbox
+OWASP
+pagination | pagination|paging
+partition | partitions?
+PKCE
+polling | polling
+problem details | problem details|RFC 9457
+Protobuf
+publish and subscribe | publish(?: and |/)subscribe|pub/sub
+quarantine
+rate limit | rate[- ]limit(?:s|ing)?
+rebalance | rebalanc\w+
+reconciliation | reconcil\w+
+recovery point objective | RPO|recovery point objective
+recovery time objective | RTO|recovery time objective
+reconnaissance sheet | reconnaissance sheets?
+replay | replay(?:ed|ing)?
+retention
+Retry-After
+reverse ETL
+runbook | runbooks?
+saga | sagas?
+SAP
+Salesforce
+schema registry
+SCIM
+service account | service accounts?
+service-level objective | service-level objectives?|SLOs?
+service-level indicator | service-level indicators?|SLIs?
+ServiceNow
+SFTP
+share groups | share groups?
+SOAP
+STRIDE
+strangler fig
+timeout | timeouts?
+token bucket
+token provider
+tracing | distributed tracing|traces?
+transformation pipeline
+upsert | upserts?
+vault | secrets? (?:manager|vault)|vaults?
+Larkspur Outdoor | Larkspur
+watermark | watermarks?
+webhook | webhooks?
+Workday
+Workato
+Boomi
+NetSuite
+Microsoft Graph
+EDI
+AS2
+OPC UA
+mainframe | mainframes?
+Parquet
+XML
+CSV
+crosswalk | crosswalks?
+least privilege
+zero-copy data sharing | zero-copy
+data virtualization
+change management
+canary release | canary
+blue-green deployment | blue-green
+shadow run | shadow runs?
+kill switch
+cutover | cutovers?
+parallel run
+hot partition | hot partitions?
+static membership
+schema evolution
+compatibility mode | compatibility modes?
+Redpanda
+Pulsar
+RabbitMQ
+Amazon Kinesis | Kinesis
+Azure Event Hubs | Event Hubs
+Terraform
+Pact
+Testcontainers
+WireMock
+Prism

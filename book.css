@@ -1,0 +1,164 @@
+@font-face { font-family: 'Source Serif 4'; src: url('assets/fonts/source-serif-4-full-400-normal.ttf'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Source Serif 4'; src: url('assets/fonts/source-serif-4-full-400-italic.ttf'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Source Serif 4'; src: url('assets/fonts/source-serif-4-full-600-normal.ttf'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Source Serif 4'; src: url('assets/fonts/source-serif-4-full-700-normal.ttf'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Source Serif 4'; src: url('assets/fonts/source-serif-4-full-700-italic.ttf'); font-weight: 700; font-style: italic; }
+@font-face { font-family: 'Book Sans'; src: url('assets/fonts/source-sans-3-full-400-normal.ttf'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Book Sans'; src: url('assets/fonts/source-sans-3-full-400-italic.ttf'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Book Sans'; src: url('assets/fonts/source-sans-3-full-600-normal.ttf'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Book Sans'; src: url('assets/fonts/source-sans-3-full-700-normal.ttf'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Book Mono'; src: url('assets/fonts/source-code-pro-latin-400-normal.woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Book Mono'; src: url('assets/fonts/source-code-pro-latin-600-normal.woff2'); font-weight: 600; font-style: normal; }
+
+@page { size: 7in 9.19in; margin: 0.8in 0.55in 0.95in 0.8in;
+  @footnote { margin-top: 0.6em; border-top: 0.4pt solid #888; padding-top: 0.3em; } }
+@page :right { margin: 0.8in 0.55in 0.95in 0.8in;
+  @top-right { content: string(section-run) "   " counter(page); font: 600 8pt 'Book Sans', 'DejaVu Sans', sans-serif; color: #333; letter-spacing: .02em; vertical-align: bottom; padding-bottom: 0.18in; } }
+@page :left { margin: 0.8in 0.8in 0.95in 0.55in;
+  @top-left { content: counter(page) "   " string(chapter-run); font: 600 8pt 'Book Sans', 'DejaVu Sans', sans-serif; color: #333; letter-spacing: .02em; vertical-align: bottom; padding-bottom: 0.18in; } }
+@page :blank { @top-left { content: none; } @top-right { content: none; } }
+@page rotated { margin: 0.45in 0.4in 0.55in 0.4in; @top-left { content: none; } @top-right { content: none; }
+  @bottom-center { content: counter(page); font: 600 8pt 'Book Sans', sans-serif; } }
+@page front { @top-left { content: none; } @top-right { content: none; }
+  @bottom-center { content: counter(page, lower-roman); font: 600 8pt 'Book Sans', sans-serif; } }
+@page part { @top-left { content: none; } @top-right { content: none; } }
+@page bodystart { counter-reset: page 1; @top-left { content: none; } @top-right { content: none; } }
+@page bare { @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } }
+
+html { lang: en; }
+body { font-family: 'Source Serif 4', 'DejaVu Serif', serif; font-size: 10pt; line-height: 1.45; color: #111; text-align: justify; hyphens: auto;
+  font-variant-ligatures: common-ligatures; font-kerning: normal; orphans: 2; widows: 2; }
+.bodymatter { counter-reset: page 1; }
+.frontmatter > section, .frontmatter { page: front; }
+.frontmatter > section.halftitle, .frontmatter > section.titlepage, .frontmatter > section.copyright { page: bare; }
+p { margin: 0 0 0.6em; }
+a { color: inherit; text-decoration: none; }
+a.xref { font-style: normal; }
+em, i { font-style: italic; } strong, b { font-weight: 700; }
+sup { font-size: .7em; vertical-align: super; line-height: 0; }
+
+/* title page and copyright */
+.titlepage { break-after: page; text-align: center; padding-top: 1.6in; }
+.tp-top { font: 600 10pt 'Book Sans', sans-serif; letter-spacing: .25em; text-transform: uppercase; color: #555; margin-bottom: .6in; }
+.tp-title { font: 700 34pt/1.08 'Book Sans', sans-serif; margin: 0 0 .25in; text-align: center; }
+.tp-sub { font: 400 14pt/1.35 'Book Sans', sans-serif; color: #333; margin: 0 .4in .7in; }
+.tp-author { font: 600 15pt 'Book Sans', sans-serif; margin-top: 1.2in; }
+.tp-bottom { font: 400 9pt 'Book Sans', sans-serif; color: #777; margin-top: .5in; }
+.copyright { break-after: page; font: 7.6pt/1.38 'Book Sans', sans-serif; text-align: left; padding-top: 1.2in; }
+.copyright p { margin: 0 0 .5em; }
+
+/* parts */
+.part.firstpart { page: bodystart; }
+.part { page: part; break-before: right; break-after: page; text-align: left; padding-top: 2.1in; }
+.partnum { font: 600 12pt 'Book Sans', sans-serif; letter-spacing: .2em; text-transform: uppercase; color: #555; }
+.parttitle { font: 700 34pt/1.08 'Book Sans', sans-serif; margin: .12in 0 .4in; string-set: chapter-run "\00a0", section-run "\00a0"; bookmark-level: 1; bookmark-label: content(); }
+.partintro { font: 400 11.5pt/1.5 'Source Serif 4', serif; color: #222; margin-right: .5in; }
+.partintro p { text-align: left; }
+
+/* chapter and appendix openers */
+.chapter, .appendix, .frontsec, .tocsec, .backsec { break-before: right; }
+.chapnum { font: 600 11pt 'Book Sans', sans-serif; letter-spacing: .2em; text-transform: uppercase; color: #555; margin-top: 1.1in; string-set: chapter-run "\00a0", section-run "\00a0"; }
+.chaptitle { font: 700 27pt/1.1 'Book Sans', 'DejaVu Sans', sans-serif; margin: .1in 0 .5in; text-align: left; hyphens: manual; bookmark-level: 1; bookmark-label: content(); }
+.chaptitle.front { margin-top: 1.1in; string-set: chapter-run "\00a0", section-run "\00a0"; }
+.content { string-set: chapter-run attr(data-title); }
+
+
+/* headings */
+h2 { font: 700 15pt/1.2 'Book Sans', 'DejaVu Sans', sans-serif; margin: 1.5em 0 .5em; break-after: avoid; string-set: section-run content(); bookmark-level: 2; bookmark-label: content(); text-align: left; hyphens: manual; }
+h3 { font: 700 11.5pt/1.25 'Book Sans', 'DejaVu Sans', sans-serif; margin: 1.25em 0 .4em; break-after: avoid; bookmark-level: 3; bookmark-label: content(); text-align: left; hyphens: manual; }
+h4 { font: 700 10pt/1.3 'Book Sans', 'DejaVu Sans', sans-serif; font-style: italic; margin: 1em 0 .3em; break-after: avoid; text-align: left; }
+h2 + h3 { margin-top: .6em; }
+
+/* lists */
+ul, ol { margin: .2em 0 .75em 1.3em; padding: 0; text-align: left; }
+li { margin: .18em 0; padding-left: .15em; }
+li > p { margin: 0 0 .3em; }
+dl { margin: .4em 0 .8em; } dt { font-weight: 700; font-family: 'Book Sans', sans-serif; font-size: 9.5pt; margin-top: .5em; text-align: left; } dd { margin: 0 0 .3em 1.2em; text-align: left; }
+
+/* code */
+code { font-family: 'Book Mono', 'DejaVu Sans Mono', monospace; font-size: .84em; hyphens: none; overflow-wrap: anywhere; }
+.codehilite { margin: .55em 0 .9em; background: #f5f5f5; border-left: 2.2pt solid #888; padding: .5em .7em; break-inside: auto; }
+.codehilite pre { margin: 0; font-family: 'Book Mono', 'DejaVu Sans Mono', monospace; font-size: 7.5pt; line-height: 1.34; white-space: pre-wrap; hyphens: none; text-align: left; orphans: 3; widows: 3; }
+.codehilite code { font-size: 1em; background: none; }
+pre { hyphens: none; }
+
+/* tables */
+.tblcap { font: 400 8.6pt/1.3 'Book Sans', sans-serif; margin: 1.1em 0 .25em; text-align: left; break-after: avoid; }
+.fnum { font-weight: 700; }
+table { width: 100%; border-collapse: collapse; font: 400 8.2pt/1.32 'Book Sans', 'DejaVu Sans', sans-serif; margin: .25em 0 1.1em; text-align: left; hyphens: manual; }
+thead { display: table-header-group; }
+th { font-weight: 700; border-top: 1pt solid #111; border-bottom: .6pt solid #111; padding: 3pt 5pt; vertical-align: bottom; }
+td { padding: 3pt 5pt; border-bottom: .3pt solid #aaa; vertical-align: top; }
+tr { break-inside: avoid; }
+td code, th code { font-size: .9em; }
+
+/* admonitions */
+.admonition { margin: 1em 0; padding: .5em .8em .35em; background: #f3f3f3; border: .5pt solid #999; border-left: 3pt solid #222; font: 400 9pt/1.4 'Book Sans', 'DejaVu Sans', sans-serif; text-align: left; break-inside: avoid; }
+.admonition p { margin: 0 0 .45em; text-align: left; }
+.admonition-title { font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: 7.8pt; margin: 0 0 .25em; color: #222; }
+.admonition.warning { background: #fbf1ef; border-left-color: #a52a1e; }
+.admonition.why { background: #fff9e6; border-left-color: #8a6a00; }
+.admonition.tip { background: #eef6f0; border-left-color: #2d6a45; }
+.admonition.goals { background: #fff; border: .8pt solid #111; border-left: 3pt solid #111; font-size: 9.3pt; margin: 0 0 1.4em; }
+.admonition.example, .admonition.field { background: #f6f6fa; border-left-color: #3f4f7d; }
+.admonition ul, .admonition ol { margin-bottom: .4em; }
+.admonition .codehilite { background: #fff; }
+
+/* figures */
+figure { margin: 1em 0 1.1em; text-align: center; break-inside: avoid; }
+figure img { display: block; margin: 0 auto; max-width: 100%; }
+figure.wide { margin-left: -.15in; margin-right: -.15in; }
+figure.wide img { max-width: none; }
+figcaption { font: 400 8.4pt/1.32 'Book Sans', sans-serif; margin-top: .45em; text-align: left; hyphens: manual; }
+.fnotes { margin-top: .3em; text-align: left; }
+.fnotes p { font: 400 8pt/1.3 'Book Sans', sans-serif; margin: 0 0 .15em; text-align: left; }
+.fl { display: inline-block; width: 1.3em; font-weight: 700; color: #a52a1e; }
+figure.rot { page: rotated; break-before: page; break-after: page; margin: 0; }
+figure.rot img { margin: 0 auto; max-width: none; }
+.ggrid { display: grid; grid-template-columns: 1fr 1fr; gap: 6pt 10pt; }
+.gcell img { width: 100%; } .gsub { font: 400 8pt 'Book Sans', sans-serif; text-align: center; margin-top: 2pt; }
+
+/* footnotes */
+.fn { float: footnote; font: 400 8.2pt/1.3 'Book Sans', sans-serif; text-align: left; }
+.fn::footnote-call { content: counter(footnote); font-size: .7em; vertical-align: super; line-height: 0; }
+.fn::footnote-marker { content: counter(footnote) ". "; font-weight: 700; }
+
+/* contents and index */
+ul.toc { list-style: none; margin: 0; padding: 0; text-align: left; font: 400 9.4pt/1.35 'Book Sans', sans-serif; }
+ul.toc li { margin: 0; padding: 0; }
+ul.toc a { display: block; }
+ul.toc a::after { content: leader('.') attr(data-pn); }
+li.t-part { margin-top: .9em; font-weight: 700; font-size: 10.2pt; letter-spacing: .02em; }
+li.t-part a::after { content: ''; }
+li.t-ch { margin-top: .3em; font-weight: 600; }
+li.t-ch .tn { display: inline-block; width: 1.9em; }
+li.t-h2 { margin-left: 1.9em; font-size: 8.6pt; color: #333; }
+.index { column-count: 2; column-gap: .3in; font: 400 8.3pt/1.3 'Book Sans', sans-serif; text-align: left; hyphens: manual; }
+.ix { margin: 0; padding-left: 1em; text-indent: -1em; }
+.ix .term::after { content: ', '; }
+.ix a::after { content: attr(data-pn); }
+.ix a + a::before { content: ', '; }
+.ixl { font: 700 10pt 'Book Sans', sans-serif; margin: .7em 0 .2em; break-after: avoid; }
+.ixm { font-size: 0; }
+section.frontsec .content, section.backsec .content { }
+
+/* appendix B interview cards */
+.qa { margin: 0 0 .75em; padding: 0 0 .5em; border-bottom: .3pt solid #bbb; break-inside: avoid; }
+.qa p { margin: 0 0 .25em; text-align: left; font-family: 'Book Sans', 'DejaVu Sans', sans-serif; font-size: 8.8pt; line-height: 1.38; }
+.qq { font-weight: 700; font-size: 9.4pt !important; }
+.qn { color: #555; margin-right: .2em; }
+.lvl { font-weight: 600; font-size: 7.5pt; letter-spacing: .05em; text-transform: uppercase; border: .5pt solid #777; border-radius: 2pt; padding: 0 3pt; margin-left: 4pt; color: #333; white-space: nowrap; }
+.qmeta { font-size: 8pt !important; color: #333; }
+/* glossary */
+dl { font-family: 'Source Serif 4', serif; }
+dt { font-family: 'Book Sans', sans-serif; font-size: 9.4pt; margin-top: .6em; }
+dd { font-size: 9.4pt; }
+
+/* half title, author lines, lists */
+.halftitle { break-after: page; text-align: center; padding-top: 2.6in; }
+.halftitle h1 { font: 600 20pt 'Book Sans', sans-serif; margin: 0; text-align: center; }
+.tp-role { font: 400 11pt 'Book Sans', sans-serif; color: #444; margin-top: .06in; }
+.tp-ai { font: italic 8.5pt 'Book Sans', sans-serif; color: #777; margin-top: .25in; }
+ul.toc li.lf { margin: 0 0 .15em; font-size: 8.4pt; }
+ul.toc li.lf .tn { display: inline-block; min-width: 4.4em; font-weight: 600; }
+#index .chaptitle { string-set: chapter-run "Index"; }
